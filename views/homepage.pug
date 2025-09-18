@@ -1,0 +1,21 @@
+doctype html
+html 
+    head 
+        title= `${title}`
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet", href="/css/style.css")
+    body    
+        h1 Pets
+        a(href="/update-pets") Add/Update this table
+        table 
+            thead
+                tr
+                    th Nombre
+                    th Sexo
+                    th Edad
+            tbody
+                each pet in pets
+                    tr
+                        td #{pet.properties.nombre}
+                        td #{pet.properties.sexo}
+                        td #{pet.properties.edad}
